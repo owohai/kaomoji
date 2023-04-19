@@ -5,7 +5,7 @@
 A huge, non-exhaustive list of Kaomoji. (っ＾▿＾)💨
 
 ### ...aand, why?
-I love sprinkling kaomoji and litreally anything I make (just look at my GitHub repositories). kaomoji has so many uses and I cannot emphasise how much flavor it adds to your projects. Okay, this is starting to sound more like a baking recipe (/ω＼)
+I love sprinkling kaomoji on litreally anything I make (just look at my GitHub repositories). kaomoji has so many uses and I cannot emphasise how much flavor it adds to your projects. Okay, this is starting to sound more like a baking recipe (/ω＼)
 
 The current list of kaomoji which is available at `src/compilations/complied-prod01.json` was mostly scrapped from many sources which I have listed at the bottom of this readme. This project would never have been possible without then and and extend my apperceptions to them. 
 
