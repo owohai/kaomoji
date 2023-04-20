@@ -1,6 +1,6 @@
 ## (ʘᗩʘ’) 🧨💥💥
 
-Be prepared to be blown away, quite literally. No, like seriously, your browser might have a hard time viewing in the browser. It is recommended to download (& verify!) the latest release from [here](www.google.com)
+Be prepared to be blown away, quite literally. No, like seriously, your browser might have a hard time viewing the compiled files. It is recommended to download (& verify!) the latest release from [here](www.google.com)
 
 > Verify the release?! (￢￢)?
 > 
