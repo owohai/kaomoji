@@ -1,6 +1,6 @@
 # kaomoji 
 
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0) ![GitHub repo size](https://img.shields.io/github/repo-size/owohai/kaomoji?color=green)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0) ![GitHub repo size](https://img.shields.io/github/repo-size/owohai/kaomoji?color=green) ![GitHub](https://img.shields.io/github/license/owohai/kaomoji?color=red)
 
 A huge, non-exhaustive list of Kaomoji. (っ＾▿＾)💨
 
