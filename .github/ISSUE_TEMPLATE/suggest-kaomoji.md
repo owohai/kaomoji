@@ -1,19 +1,109 @@
----
-name: Suggest kaomoji
-about: adding kaomoji couldn't be easier (☆∀☆)
-title: "[additon] - "
-labels: adding kaomoji
-assignees: ''
+name: Pack Conversion
+description: Request an automated pack conversion
+title: "[Pack]: "
+labels: ["conversion"]
 body:
-- type: input
-  id: suggestion
-  attributes:
-    label: kaomoji in question
-    description: "feel free to also include multiples"
+  - type: markdown
+    attributes:
+      value: |
+        Please be sure to include a directly downloadable link to your pack. The action will fail if the pack cannot be downloaded.
+  - type: input
+    id: java-pack-direct-download-url
+    attributes:
+      label: Java Pack Direct Download URL
+      description: Please provide a direct link to the Java Edition resource pack to be converted.
+      placeholder: e.g. https://github.com/Paradisu/ParadisuResourcePack/releases/latest/download/ParadisuResourcePack.zip
+    validations:
+      required: true
+  - type: input
+    id: default-pack-direct-download-url
+    attributes:
+      label: Default Pack Direct Download URL
+      description: Optionally provide a direct link to a Java Edition resource pack to be used for default textures before the vanilla default pack.
+      placeholder: e.g. https://github.com/Paradisu/ParadisuResourcePack/releases/latest/download/ParadisuResourcePack.zip
+    validations:
+      required: false
+  - type: input
+    id: bedrock-merge-pack-direct-download-url
+    attributes:
+      label: Bedrock Merge Pack Direct Download URL
+      description: Optionally provide a direct link to the Bedrock Edition resource pack to be merged into the converted pack.
+      placeholder: e.g. https://github.com/Kas-tle/imaginefun-bedrock-rp/releases/download/1.1.3/imaginefun_rp-v1.1.3.mcpack
+    validations:
+      required: false
+  - type: dropdown
+    id: default-assets-version
+    attributes:
+      label: Default Assets Version
+      description: Optinally select the default assets version to use for the converted pack.
+      options:
+        - 1.13.2
+        - 1.14.4
+        - 1.15.2
+        - 1.16.5
+        - 1.17.1
+        - 1.18.2
+        - 1.19.2
+        - 1.19.3
+        - 1.19.4
+        - 1.20
+        - 1.20.1
+    validations:
+      required: false
 
-- type: input
-  id: optional
-  attributes:
-    label: (optional) what lead you to adding this kaomoji?
-  
----
+  - type: dropdown
+    id: block-material
+    attributes:
+      label: Block Material
+      description: | 
+        Please provide a block material to be used in the script. If one is not selected, `alpha_test` will be used. 
+        See the [Bedrock Wiki](https://wiki.bedrock.dev/blocks/block-materials.html) for more info.
+          - `opaque`: no support for transparent or translucent pixels and renders only on outside faces
+          - `alpha_test`: support for transparent pixels and renders only on outside faces
+          - `blend`: support for translucent pixels and renders only on outside faces
+          - `double_sided`: no support for transparent or translucent pixels. but renders both outside and inside faces
+      options:
+        - opaque
+        - alpha_test
+        - blend
+        - double_sided
+    validations:
+      required: false
+  - type: dropdown
+    id: attachable-material
+    attributes:
+      label: Attachable Material
+      description: | 
+        Please provide an attachable material to be used in the script. If one is not selected, `entity_alphatest_one_sided` will be used. 
+        See the [Bedrock Wiki](https://wiki.bedrock.dev/documentation/materials.html) for more info.
+          - `entity`: basic opaque material with no support for transparent or translucent pixels
+          - `entity_alphatest`: supports transparent pixels but lacks backface culling, which will cause z-fighting on thin elements
+          - `entity_alphablend`: supports translucent pixels and backface culling, though objects behind may render inconsistently
+          - `entity_alphatest_one_sided`: supports transparent pixels and backface culling
+      options:
+        - entity
+        - entity_alphatest
+        - entity_alphablend
+        - entity_alphatest_one_sided
+        - entity_emissive_alpha_one_sided
+    validations:
+      required: false
+  - type: dropdown
+    id: archive-scratch
+    attributes:
+      label: Archive Scratch Files
+      description: |
+        Should scratch files be archived? This will create a zip file containing the scratch files used by the script during the conversion process. If not selected, this will default to `false`.
+      options:
+        - 'true'
+        - 'false'
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: |
+        By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/Kas-tle/java2bedrock.sh/blob/main/CODE_OF_CONDUCT.md)
+        You further agree that you either own or have permission to use any content you have linked to within this form.
+      options:
+        - label: I agree to follow this project's Code of Conduct. I have permission to use all assets I have linked to within this form.
+          required: true
