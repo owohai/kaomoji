@@ -1,3 +1,4 @@
+---
 name: Suggest kaomoji
 about: adding kaomoji couldn't be easier (☆∀☆)
 title: "[additon] - "
@@ -14,4 +15,5 @@ body:
   id: optional
   attributes:
     label: (optional) what lead you to adding this kaomoji?
-
+  
+---
